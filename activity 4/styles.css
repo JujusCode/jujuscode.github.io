@@ -5,6 +5,13 @@
 .page-content {
   padding-top: 30px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#education p {
+  padding: 20px;
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -16,10 +23,36 @@
   transition: 0.3s;
 }
 .card-header {
+  position: relative;
   padding: 1%;
   font-size: 20px;
   font-weight: 700;
   border-bottom: 2px solid rgb(192, 192, 192);
+}
+.card-header input {
+  position: absolute;
+  right: 52px;
+  padding: 5px;
+  bottom: 12px;
+  align-items: center;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: 1px solid teal;
+}
+.card-header i {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+  bottom: 11px;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.card-header input ::placeholder {
+  color: black;
 }
 .card-body {
   padding: 5%;
@@ -28,22 +61,16 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-nav {
-  background-color: teal;
-  list-style-type: none;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .nav {
-  background-color: teal;
+  background: teal;
   list-style-type: none;
   position: fixed;
   top: 0;
   width: 100%;
   text-align: center;
+  z-index: 1;
 }
+
 .nav li {
   display: inline-block;
   font-size: 20px;
@@ -61,7 +88,6 @@ nav {
   text-align: center;
 }
 .card {
-  /* Add shadows to create the "card" effect */
   border: 3px solid teal;
   border-radius: 5px;
   width: 70%;
@@ -69,4 +95,11 @@ nav {
   margin-top: 3%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+}
+.card li {
+  padding: 3px;
+  margin-left: 5px;
+}
+.hidden {
+  display: none;
 }
